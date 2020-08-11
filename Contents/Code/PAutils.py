@@ -149,13 +149,9 @@ def Encode(text):
 
 
 def Decode(text):
-    if text.isalnum():
-        text = text.encode('UTF-8')
+    text = text.encode('UTF-8')
 
-        return base58.b58decode(text)
-    else:
-        # Old style decoding
-        return text.replace('$', '/').replace('_', '/').replace('?', '!')
+    return base58.b58decode(text)
 
 
 def getClearURL(url):

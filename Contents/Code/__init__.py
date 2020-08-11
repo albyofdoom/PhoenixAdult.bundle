@@ -28,11 +28,7 @@ class PhoenixAdultAgent(Agent.Movies):
     primary_provider = True
 
     def search(self, results, media, lang):
-        if Prefs['strip_enable']:
-            title = media.name.split(Prefs['strip_symbol'], 1)[0]
-        else:
-            title = media.name
-
+        title = media.name
         if media.primary_metadata is not None:
             title = media.primary_metadata.studio + " " + media.primary_metadata.title
 
@@ -146,7 +142,7 @@ class PhoenixAdultAgent(Agent.Movies):
                 results = PAsearchSites.networkGammaEnt.search(results, encodedTitle, searchTitle, siteNum, lang, searchDate)
 
             # Mile High Media
-            elif (361 <= searchSiteID <= 364) or searchSiteID == 852 or (914 <= searchSiteID <= 915):
+            elif (361 <= searchSiteID <= 364) or searchSiteID == 852:
                 results = PAsearchSites.network1service.search(results, encodedTitle, searchTitle, siteNum, lang, searchDate)
 
             # Fantasy Massage
@@ -817,17 +813,6 @@ class PhoenixAdultAgent(Agent.Movies):
             elif searchSiteID == 913:
                 results = PAsearchSites.siteHucows.search(results, encodedTitle, searchTitle, siteNum, lang, searchDate)
 
-            # Why Not Bi
-            elif searchSiteID == 916:
-                results = PAsearchSites.network1service.search(results, encodedTitle, searchTitle, siteNum, lang, searchDate)
-
-            # HentaiPros
-            elif searchSiteID == 917:
-                results = PAsearchSites.network1service.search(results, encodedTitle, searchTitle, siteNum, lang, searchDate)
-
-            # PornPortal
-            elif (918 <= searchSiteID <= 929):
-                results = PAsearchSites.network1service.search(results, encodedTitle, searchTitle, siteNum, lang, searchDate)
 
         results.Sort('score', descending=True)
 
@@ -957,7 +942,7 @@ class PhoenixAdultAgent(Agent.Movies):
             metadata = PAsearchSites.networkGammaEntOther.update(metadata, siteID, movieGenres, movieActors)
 
         # MileHighMedia
-        elif siteID == 852 or (siteID >= 361 and siteID <= 364) or (914 <= siteID <= 915):
+        elif siteID == 852 or (siteID >= 361 and siteID <= 364):
             metadata = PAsearchSites.network1service.update(metadata, siteID, movieGenres, movieActors)
 
         # Dogfart Network
@@ -1431,18 +1416,6 @@ class PhoenixAdultAgent(Agent.Movies):
         # Hucows
         elif siteID == 913:
             metadata = PAsearchSites.siteHucows.update(metadata, siteID, movieGenres, movieActors)
-
-        # Why Not Bi
-        elif siteID == 916:
-            metadata = PAsearchSites.network1service.update(results, encodedTitle, searchTitle, siteNum, lang, searchDate)
-
-        # HentaiPros
-        elif siteID == 917:
-            metadata = PAsearchSites.network1service.update(results, encodedTitle, searchTitle, siteNum, lang, searchDate)
-
-        # PornPortal
-        elif (918 <= siteID <= 929):
-            metadata = PAsearchSites.network1service.update(results, encodedTitle, searchTitle, siteNum, lang, searchDate)
 
         # Cleanup Genres and Add
         Log("Genres")

@@ -328,7 +328,6 @@ The above is a reference list. Please see [the manualsearch doc](./manualsearch.
   - WeLikeGirls
 + #### Gloryhole Secrets | Matching type: *[Limited](./manualsearch.md#limited-search)* - **Title only** (Title includes actress first name)
 + #### Hegre | Matching type: *[Limited](./manualsearch.md#limited-search)* - **Title only**
-+ #### HentaiPros | Matching type: *[Enhanced](./manualsearch.md#enhanced-search)*
 + #### HighTechVR Network | Matching type: *[Exact](./manualsearch.md#exact-match)* - **SceneID**
   - SexBabesVR
   - SinsVR
@@ -629,19 +628,6 @@ The above is a reference list. Please see [the manualsearch doc](./manualsearch.
 + #### PornFidelity Network | Matching type: *[Enhanced](./manualsearch.md#enhanced-search)*
   - PornFidelity
   - TeenFidelity
-+ #### PornPortal | Matching type: *[Enhanced](./manualsearch.md#enhanced-search)*
-  - 3dxstar Channel PornPortal
-  - Anal Channel PornPortal
-  - BBW Channel PornPortal
-  - Cosplay Channel PornPortal
-  - Ebony Channel PornPortal
-  - Latina Channel PornPortal
-  - Lesbian Channel PornPortal
-  - Milf Channel PornPortal
-  - RealityGang Channel PornPortal
-  - Stepfamily Channel PornPortal
-  - Teen Channel PornPortal
-  - VR Channel PornPortal
 + #### PornPros Network | Matching type: *[Exact](./manualsearch.md#exact-match)* - **Direct URL, Date Add**
   - 18YearsOld
   - 40ozBounce
@@ -944,9 +930,8 @@ The above is a reference list. Please see [the manualsearch doc](./manualsearch.
   - MilfVR
   - WankzVR
 + #### We Are Hairy | Matching type: *[Enhanced](./manualsearch.md#enhanced-search)*
-+ #### Why Not Bi | Matching type: *[Enhanced](./manualsearch.md#enhanced-search)*
-+ #### Wicked | Matching type: *[Enhanced](./manualsearch.md#enhanced-search)*
 + #### WowGirls | Matching type: *[Limited](./manualsearch.md#limited-search)* - **Date Add**
++ #### Wicked | Matching type: *[Enhanced](./manualsearch.md#enhanced-search)*
 + #### X-Art | Matching type: *[Enhanced](./manualsearch.md#enhanced-search)*
 + #### XConfessions | Matching type: *[Limited](./manualsearch.md#limited-search)*
 + #### Xempire | Matching type: *[Enhanced](./manualsearch.md#enhanced-search)*
