@@ -88,6 +88,7 @@ def update(metadata, siteID, movieGenres, movieActors):
     metadata.collections.clear()
     metadata.tagline = siteName
     metadata.collections.add(siteName)
+    metadata.collections.add('Studio - TeamSkeet')
 
     # Release Date
     if sceneDate:

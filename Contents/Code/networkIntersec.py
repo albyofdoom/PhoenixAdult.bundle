@@ -18,7 +18,7 @@ def search(results, encodedTitle, searchTitle, siteNum, lang, searchDate):
         else:
             score = 100 - Util.LevenshteinDistance(searchTitle.lower(), titleNoFormatting.lower())
 
-        results.Append(MetadataSearchResult(id='%s|%d|%s' % (curID, siteNum, scenePoster), name='%s [Intersec/%s] %s' % (titleNoFormatting, PAsearchSites.getSearchSiteName(siteNum), releaseDate), score=score, lang=lang))
+        results.Append(MetadataSearchResult(id='%s|%d|%s' % (curID, siteNum, scenePoster), name='%s [Intersec/%s] %s' % (releaseDate, titleNoFormatting, PAsearchSites.getSearchSiteName(siteNum)), score=score, lang=lang))
 
     return results
 
@@ -64,7 +64,7 @@ def update(metadata, siteID, movieGenres, movieActors):
         tagline = 'Intersex'
     metadata.tagline = tagline
     metadata.collections.add(tagline)
-
+    metadata.collections.add('Studio - Intersec')
     # Release Date
     date = detailsPageElements.xpath('//div[contains(@class, "has-text-white-ter")][1]//span[contains(@class, "is-dark")][1]/text()')[0]
     if date:

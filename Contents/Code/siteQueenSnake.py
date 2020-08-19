@@ -3,6 +3,15 @@ import PAgenres
 import PAactors
 import PAutils
 
+# Known Issues
+#   - Images sometimes return placeholders (black and white swirls). Unknown cause.
+#
+#   - [Resolved/Code Fix] Occassionally title matches will stop working, and site will redirect to front page instead. Unknown cause.
+#       - Fix: Redirect was on non-match, even though occasionally it's a false negative. Added check to search function
+ 
+# To Do (maybe):
+# - Pull Artwork, Genres, and extended description from blog at qsbdsm.com. Exact date matches should work for this.
+# - Add actor photos manually. 
 
 def search(results, encodedTitle, searchTitle, siteNum, lang, searchDate):
     encodedTitle = searchTitle.replace(' ', '-').lower()
@@ -20,7 +29,8 @@ def search(results, encodedTitle, searchTitle, siteNum, lang, searchDate):
 
         score = 100 - Util.LevenshteinDistance(searchTitle.lower(), titleNoFormatting.lower())
 
-        results.Append(MetadataSearchResult(id='%s|%d' % (curID, siteNum), name='%s [%s] %s' % (titleNoFormatting, PAsearchSites.getSearchSiteName(siteNum), releaseDate), score=score, lang=lang))
+        if '/previewmovies/0' not in str(searchResult.xpath('//div[@class="pagerWrapper"]/a/@href')[0]):
+            results.Append(MetadataSearchResult(id='%s|%d' % (curID, siteNum), name='%s [%s] %s' % (titleNoFormatting, PAsearchSites.getSearchSiteName(siteNum), releaseDate), score=score, lang=lang))
 
     return results
 
@@ -31,9 +41,6 @@ def update(metadata, siteID, movieGenres, movieActors):
     if not sceneURL.startswith('http'):
         sceneURL = PAsearchSites.getSearchSearchURL(siteID) + sceneURL
     req = PAutils.HTTPRequest(sceneURL, headers={'Cookie': 'cLegalAge=true'})
-    Log('req.headers:')
-    Log(req.headers['Set-Cookie'].split(';')[0])
-    Log(':req.headers')
 
     SessionID = req.headers['Set-Cookie'].split(';')[0]
 
@@ -44,11 +51,11 @@ def update(metadata, siteID, movieGenres, movieActors):
     metadata.title = Title.title()
 
     # Studio
-    metadata.studio = 'QueenSnake.com'
+    metadata.studio = PAsearchSites.getSearchSiteName(siteID)
 
     # Tagline and Collection(s)
     metadata.collections.clear()
-    tagline = 'QueenSnake'
+    tagline = PAsearchSites.getSearchSiteName(siteID)
     metadata.tagline = tagline
     metadata.collections.add(tagline)
 
@@ -67,9 +74,6 @@ def update(metadata, siteID, movieGenres, movieActors):
     except:
         pass
     
-    # Blog Summary
-    ## ToDo
-
     # Genres
     movieGenres.clearGenres()
 
@@ -82,9 +86,6 @@ def update(metadata, siteID, movieGenres, movieActors):
     for genreLink in detailsPageElements.xpath('//div[@class="contentPreviewTags"]/a'):
         genreName = genreLink.text_content().strip()
         movieGenres.addGenre(genreName)
-
-    # Blog Genres
-    ## ToDo
 
     # Actors
     movieActors.clearActors()
@@ -121,7 +122,6 @@ def update(metadata, siteID, movieGenres, movieActors):
     ]
 
     for actorLink in detailsPageElements.xpath('//div[@class="contentPreviewTags"]/a'):
-        Log(actorLink.text_content())
         if actorLink.text_content().strip().lower() in siteActors:
             actorName = actorLink.text_content().strip()
             actorPhotoURL = ''
@@ -130,7 +130,7 @@ def update(metadata, siteID, movieGenres, movieActors):
 
     # Posters
     art = []
-    for poster in detailsPageElements.xpath('//div[@class="contentBlock"]//img/@src'):
+    for poster in detailsPageElements.xpath('//div[@class="contentBlock"]//img[contains(@src,"preview")]/@src'):
         posterUrl = PAsearchSites.getSearchBaseURL(siteID) + poster.split('?')[0]
         art.append(posterUrl)
 
