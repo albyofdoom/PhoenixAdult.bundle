@@ -110,7 +110,8 @@ def update(metadata, siteID, movieGenres, movieActors):
 
     for seriesName in seriesNames:
         metadata.collections.add(seriesName)
-
+    metadata.collections.add('Studio - ' + metadata.studio)
+    
     # Release Date
     date_object = parse(detailsPageElements['dateReleased'])
     metadata.originally_available_at = date_object
