@@ -1504,6 +1504,7 @@ class PhoenixAdultAgent(Agent.Movies):
         Log("Genres")
         movieGenres.processGenres(metadata)
         metadata.genres = sorted(metadata.genres)
+        metadata.collections.add('Studio - ' + metadata.studio)
 
         # Cleanup Actors and Add
         Log("Actors")
