@@ -19,11 +19,17 @@ import PAutils
 def search(results, encodedTitle, searchTitle, siteNum, lang, searchDate):
     searchJAVID = None
     splitSearchTitle = searchTitle.split(' ')
-    if unicode(splitSearchTitle[1], 'UTF-8').isdigit():
-        searchJAVID = '%s%%2B%s' % (splitSearchTitle[0], splitSearchTitle[1])
+    Log(searchTitle)
+    try:
+        if unicode(splitSearchTitle[1], 'UTF-8').isdigit():
+            searchJAVID = '%s%%2B%s' % (splitSearchTitle[0], splitSearchTitle[1])
+    except:
+        pass
 
     if searchJAVID:
         encodedTitle = searchJAVID
+    # else:
+    #     encodedTitle = searchTitle
 
     searchTypes = [
         'Censored',
