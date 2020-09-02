@@ -1,125 +1,12 @@
-import PAutils
-import siteNaughtyAmerica
-import siteXart
-import siteBangBros
-import sitePorndoePremium
-import siteLegalPorno
-import siteGloryHoleSecrets
-import siteNewSensations
-import siteSpizoo
-import sitePrivate
-import networkFullPornNetwork
-import networkSteppedUp
-import networkGammaEnt
-import networkDogfart
-import siteJulesJordan
-import networkDDFNetwork
-import networkPerfectGonzo
-import networkPornFidelity
-import networkBadoinkVR
-import siteVRBangers
-import networkHighTechVR
-import siteMilfVR
-import siteJoymii
-import networkPornPros
-import networkStrike3
-import networkKink
-import networkNubiles
-import networkBellaPass
-import siteAllureMedia
-import siteManyvids
-import siteVirtualReal
-import siteVirtualTaboo
-import networkCzechVR
-import siteFinishesTheJob
-import networkWankz
-import siteTonightsGirlfriend
-import siteKarups
-import networkTeenMegaWorld
-import siteScrewbox
-import siteDorcelClub
-import siteMissaX
-import siteMylf
-import addActors
-import siteFirstAnalQuest
-import siteHegre
-import networkFemdomEmpire
-import siteDorcelVision
-import siteXConfessions
-import networkCzechAV
-import siteArchAngel
-import siteWeAreHairy
-import siteLoveHerFeet
-import siteMomPOV
-import networkFuelVirtual
-import siteStraplezz
-import siteLittleCaprice
-import siteWowGirls
-import siteVIPissy
-import siteGirlsOutWest
-import siteGirlsRimming
-import siteGangbangCreampie
-import siteStepSecrets
-import siteVRHush
-import networkMetArt
-import siteFittingRoom
-import siteClips4Sale
-import siteVogoV
-import siteUltrafilms
-import siteFuckingAwesome
-import siteToughLoveX
-import siteCumLouder
-import siteZTOD
-import siteClubFilly
-import networkIntersec
-import networkCherryPimps
-import site18OnlyGirls
-import siteClubSeventeen
-import siteElegantAngel
-import siteReidMyLips
-import sitePlayboyPlus
-import siteMeanaWolf
-import siteHustler
-import siteAmourAngels
-import networkR18
-import networkBang
-import siteVivid
-import siteJaysPOV
-import siteBAMVisions
-import sitePJGirls
-import siteSinsLife
-import networkPuffy
-import networkSinX
-import networkPureCFNM
-import siteATKGirlfriends
-import networkTwoWebMedia
-import siteInterracialPass
-import network1service
-import networkTeamSkeet
-import networkGammaEntOther
-import siteRealityLovers
-import siteHoloGirlsVR
-import siteLethalHardcoreVR
-import siteDefeated
-import siteXVirtual
-import siteLustReality
-import siteSexLikeReal
-import siteXillimite
-import siteVRPFilms
-import siteVRLatina
-import siteVRConk
-import networkEvolvedFights
-import networkJavBus
-import siteHucows
-import siteAllAnalAllTheTime
-import siteQueenSnake
-import siteScrewMeToo
-import siteBoxTruckSex
-import siteAussieAss
-import network5Kporn
-import networkTeenCoreClub
+import os
+import re
+import time
+import logging
+from datetime import datetime
 
-searchSites = [None] * 975
+logger = logging.getLogger('PASearch')
+
+searchSites = [None] * 908
 
 searchSites[0] = ("BlackedRaw", "BlackedRaw", "https://www.blackedraw.com", "https://www.blackedraw.com/api")
 searchSites[1] = ("Blacked", "Blacked", "https://www.blacked.com", "https://www.blacked.com/api")
@@ -806,7 +693,7 @@ searchSites[682] = ("Lone Milf", "Lone Milf", "https://mylf.com", "https://www.m
 searchSites[683] = ("Full Of JOI", "Full Of JOI", "https://mylf.com", "https://www.mylf.com/movies/")
 searchSites[684] = ("ManualAddActors", "ManualAddActors", "", "")
 searchSites[685] = ("First Anal Quest", "First Anal Quest", "http://www.firstanalquest.com", "http://www.firstanalquest.com/search/?q=")
-searchSites[686] = ("PervMom", "PervMom", "https://www.pervmom.com", "https://www.pervmom.com/movies")
+searchSites[686] = ("PervMom", "PervMom", "https://www.pervmom.com", "hhttps://www.pervmom.com/movies")
 searchSites[687] = ("Chantas Bitches", "Chantas Bitches", "http://www.kink.com", "http://www.kink.com/search?channelIds=chantasbitches&q=")
 searchSites[688] = ("Hegre", "Hegre", "http://www.hegre.com", "http://www.hegre.com/search?q=")
 searchSites[689] = ("Femdom Empire", "Femdom Empire", "https://femdomempire.com", "https://femdomempire.com/tour/search.php?st=advanced&qany=")
@@ -893,15 +780,15 @@ searchSites[769] = ("GirlCum", "GirlCum", "https://www.girlcum.com", "https://ww
 searchSites[770] = ("ZeroTolerance", "ZeroTolerance", "http://www.ztod.com", "http://www.ztod.com/videos?query=")
 searchSites[771] = ("ClubFilly", "ClubFilly", "http://www.clubfilly.com", "http://www.clubfilly.com/scenefocus.php?vnum=V")
 searchSites[772] = ("Insex", "Insex", "https://www.insexondemand.com", "https://www.insexondemand.com/iod/home.php?s=")
-searchSites[773] = ("Sexually Broken", "Sexuallybroken", "https://www.insexondemand.com", "https://www.insexondemand.com/iod/home.php?d=sexuallybroken.com&s=")
-searchSites[774] = ("Infernal Restraints", "Infernalrestraints", "https://www.insexondemand.com", "https://www.insexondemand.com/iod/home.php?d=infernalrestraints.com&s=")
-searchSites[775] = ("Real Time Bondage", "Realtimebondage", "https://www.insexondemand.com", "https://www.insexondemand.com/iod/home.php?d=realtimebondage.com&s=")
-searchSites[776] = ("Hardtied", "Hardtied", "https://www.insexondemand.com", "https://www.insexondemand.com/iod/home.php?d=hardtied.com&s=")
-searchSites[777] = ("Topgrl", "Topgrl", "https://www.insexondemand.com", "https://www.insexondemand.com/iod/home.php?d=topgrl.com&s=")
-searchSites[778] = ("Sensual Pain", "Sensualpain", "https://www.insexondemand.com", "https://www.insexondemand.com/iod/home.php?d=sensualpain.com&s=")
-searchSites[779] = ("Paintoy", "Paintoy", "https://www.insexondemand.com", "https://www.insexondemand.com/iod/home.php?d=paintoy.com&s=")
-searchSites[780] = ("Renderfiend", "Renderfiend", "https://www.insexondemand.com", "https://www.insexondemand.com/iod/home.php?d=renderfiend.com&s=")
-searchSites[781] = ("Hotel Hostages", "Hotelhostages", "https://www.insexondemand.com", "https://www.insexondemand.com/iod/home.php?d=hotelhostages.com&s=")
+searchSites[773] = ("Sexually Broken", "Sexuallybroken", "https://www.insexondemand.com", "https://www.insexondemand.com/iod/home.php?s=")
+searchSites[774] = ("Infernal Restraints", "Infernalrestraints", "https://www.insexondemand.com", "https://www.insexondemand.com/iod/home.php?s=")
+searchSites[775] = ("Real Time Bondage", "Realtimebondage", "https://www.insexondemand.com", "https://www.insexondemand.com/iod/home.php?s=")
+searchSites[776] = ("Hardtied", "Hardtied", "https://www.insexondemand.com", "https://www.insexondemand.com/iod/home.php?s=")
+searchSites[777] = ("Topgrl", "Topgrl", "https://www.insexondemand.com", "https://www.insexondemand.com/iod/home.php?s=")
+searchSites[778] = ("Sensual Pain", "Sensualpain", "https://www.insexondemand.com", "https://www.insexondemand.com/iod/home.php?s=")
+searchSites[779] = ("Paintoy", "Paintoy", "https://www.insexondemand.com", "https://www.insexondemand.com/iod/home.php?s=")
+searchSites[780] = ("Renderfiend", "Renderfiend", "https://www.insexondemand.com", "https://www.insexondemand.com/iod/home.php?s=")
+searchSites[781] = ("Hotel Hostages", "Hotelhostages", "https://www.insexondemand.com", "https://www.insexondemand.com/iod/home.php?s=")
 searchSites[782] = ("GirlGirl", "GirlGirl", "https://www.girlgirl.com", "https://www.girlgirl.com/trial/search.php?query=")
 searchSites[783] = ("Cherry Pimps", "Cherry Pimps", "https://www.cherrypimps.com", "https://cherrypimps.com/search.php?query=")
 searchSites[784] = ("Wild On Cam", "Wild On Cam", "https://www.cherrypimps.com", "https://cherrypimps.com/search.php?query=")
@@ -1028,73 +915,6 @@ searchSites[904] = ("VRConk", "VRConk", "https://www.vrconk.com", "https://vrcon
 searchSites[905] = ("RealJamVR", "RealJamVR", "https://realjamvr.com", "https://realjamvr.com/virtualreality/scene/id/")
 searchSites[906] = ("Evolved Fights", "Evolved Fights", "https://www.evolvedfights.com", "https://www.evolvedfights.com/updates/")
 searchSites[907] = ("Evolved Fights Lesbian Edition", "Evolved Fights Lesbian Edition", "https://www.evolvedfightslez.com", "https://www.evolvedfightslez.com/updates/")
-searchSites[908] = ("SapphiX", "SapphiX", "https://sapphix.com", "https://sapphix.com/movies?q=")
-searchSites[909] = ("Sapphic Erotica", "Sapphic Erotica", "https://sapphix.com", "https://sapphix.com/movies?site[]=se&q=")
-searchSites[910] = ("Give Me Pink", "Give Me Pink", "https://sapphix.com", "https://sapphix.com/movies?site[]=gmp&q=")
-searchSites[911] = ("Fist Flush", "Fist Flush", "https://sapphix.com", "https://sapphix.com/movies?site[]=ff&q=")
-searchSites[912] = ("JavBus", "JavBus", "https://www.javbus.com", "https://www.javbus.com/en/")
-searchSites[913] = ("Hucows", "Hucows", "https://www.hucows.com", "https://www.hucows.com/")
-searchSites[914] = ("Mile High Media", "Mile High Media", "https://milehighmedia.com", "https://site-api.project1service.com")
-searchSites[915] = ("Mile High", "Mile High", "https://milehighmedia.com", "https://site-api.project1service.com")
-searchSites[916] = ("Why Not Bi", "Why Not Bi", "https://whynotbi.com", "https://site-api.project1service.com")
-searchSites[917] = ("HentaiPros", "HentaiPros", "https://hentaipros.com", "https://site-api.project1service.com")
-searchSites[918] = ("3dxstar Channel PornPortal", "3dxstar Channel PornPortal", "https://3dxstar-channel.pornportal.com", "https://site-api.project1service.com")
-searchSites[919] = ("Cosplay Channel PornPortal", "Cosplay Channel PornPortal", "https://cosplay-channel.pornportal.com", "https://site-api.project1service.com")
-searchSites[920] = ("Ebony Channel PornPortal", "Ebony Channel PornPortal", "https://ebony-channel.pornportal.com", "https://site-api.project1service.com")
-searchSites[921] = ("Latina Channel PornPortal", "Latina Channel PornPortal", "https://latina-channel.pornportal.com", "https://site-api.project1service.com")
-searchSites[922] = ("Teen Channel PornPortal", "Teen Channel PornPortal", "https://teen-channel.pornportal.com", "https://site-api.project1service.com")
-searchSites[923] = ("Milf Channel PornPortal", "Milf Channel PornPortal", "https://milf-channel.pornportal.com", "https://site-api.project1service.com")
-searchSites[924] = ("Stepfamily Channel PornPortal", "Stepfamily Channel PornPortal", "https://stepfamily-channel.pornportal.com", "https://site-api.project1service.com")
-searchSites[925] = ("Lesbian Channel PornPortal", "Lesbian Channel PornPortal", "https://lesbian-channel.pornportal.com", "https://site-api.project1service.com")
-searchSites[926] = ("RealityGang Channel PornPortal", "RealityGang Channel PornPortal", "https://realitygang-channel.pornportal.com", "https://site-api.project1service.com")
-searchSites[927] = ("Anal Channel PornPortal", "Anal Channel PornPortal", "https://anal-channel.pornportal.com", "https://site-api.project1service.com")
-searchSites[928] = ("BBW Channel PornPortal", "BBW Channel PornPortal", "https://bbw-channel.pornportal.com", "https://site-api.project1service.com")
-searchSites[929] = ("VR Channel PornPortal", "VR Channel PornPortal", "https://vr-channel.pornportal.com", "https://site-api.project1service.com")
-searchSites[930] = ("Raw Couples", "Raw Couples", "http://teenmegaworld.net", "http://teenmegaworld.net/search.php?query=")
-searchSites[931] = ("All Anal All The Time", "All Anal All The Time", "https://www.allanalallthetime.com", "https://www.allanalallthetime.com/videos/")
-searchSites[932] = ("QueenSnake", "QueenSnake", "https://queensnake.com", "https://queensnake.com/previewmovie/")
-searchSites[933] = ("QueenSect", "QueenSect", "https://queensect.com", "https://queensect.com/previewmovie/")
-searchSites[934] = ("StraponSquad", "StraponSquad", "http://www.kink.com", "https://www.kink.com/search?channelIds=straponsquad&q=")
-searchSites[935] = ("SexualDisgrace", "SexualDisgrace", "http://www.kink.com", "https://www.kink.com/search?channelIds=sexualdisgrace&q=")
-searchSites[936] = ("FetishNetwork", "FetishNetwork", "http://www.kink.com", "https://www.kink.com/search?channelIds=fetishnetwork&q=")
-searchSites[937] = ("FetishNetwork Male", "FetishNetwork Male", "http://www.kink.com", "https://www.kink.com/search?channelIds=fetishnetworkmale&q=")
-searchSites[938] = ("ScrewMeToo", "ScrewMeToo", "https://screwmetoo.com", "https://screwmetoo.com/?amp=1&s=")
-searchSites[939] = ("Box Truck Sex", "Box Truck Sex", "https://www.boxtrucksex.com", "https://www.boxtrucksex.com/tour/search.php?query=")
-searchSites[940] = ("Aussie Ass", "Aussie Ass", "https://www.aussieass.com/", "https://www.aussieass.com/models/")
-searchSites[941] = ("5Kporn", "5Kporn", "https://www.5kporn.com/", "https://www.5kporn.com/episodes/search?search=")
-searchSites[942] = ("5Kteens", "5Kteens", "https://www.5kporn.com/", "https://www.5kporn.com/episodes/search?search=")
-searchSites[943] = ("Analyzed Girls", "Analyzed Girls", "https://teencoreclub.com/", "https://teencoreclub.com/video/")
-searchSites[944] = ("Ass Teen Mouth", "Ass Teen Mouth", "https://teencoreclub.com/", "https://teencoreclub.com/video/")
-searchSites[945] = ("Bang Teen Pussy", "Bang Teen Pussy", "https://teencoreclub.com/", "https://teencoreclub.com/video/")
-searchSites[946] = ("Brutal Invasion", "Brutal Invasion", "https://teencoreclub.com/", "https://teencoreclub.com/video/")
-searchSites[947] = ("Cumoholic Teens", "Cumoholic Teens", "https://teencoreclub.com/", "https://teencoreclub.com/video/")
-searchSites[948] = ("Defiled 18", "Defiled 18", "https://teencoreclub.com/", "https://teencoreclub.com/video/")
-searchSites[949] = ("Double Teamed Teens", "Double Teamed Teens", "https://teencoreclub.com/", "https://teencoreclub.com/video/")
-searchSites[950] = ("Dream Teens HD", "Dream Teens HD", "https://teencoreclub.com/", "https://teencoreclub.com/video/")
-searchSites[951] = ("Girls Got Cream", "Girls Got Cream", "https://teencoreclub.com/", "https://teencoreclub.com/video/")
-searchSites[952] = ("Hardcore Youth", "Hardcore Youth", "https://teencoreclub.com/", "https://teencoreclub.com/video/")
-searchSites[953] = ("Little Hellcat", "Little Hellcat", "https://teencoreclub.com/", "https://teencoreclub.com/video/")
-searchSites[954] = ("Make Teen Gape", "Make Teen Gape", "https://teencoreclub.com/", "https://teencoreclub.com/video/")
-searchSites[955] = ("Nylon Sweeties", "Nylon Sweeties", "https://teencoreclub.com/", "https://teencoreclub.com/video/")
-searchSites[956] = ("Seductive 18", "Seductive 18", "https://teencoreclub.com/", "https://teencoreclub.com/video/")
-searchSites[957] = ("Teen Anal Casting", "Teen Anal Casting", "https://teencoreclub.com/", "https://teencoreclub.com/video/")
-searchSites[958] = ("Teen Drillers", "Teen Drillers", "https://teencoreclub.com/", "https://teencoreclub.com/video/")
-searchSites[959] = ("Teens Natural Way", "Teens Natural Way", "https://teencoreclub.com/", "https://teencoreclub.com/video/")
-searchSites[960] = ("Teens Try Blacks", "Teens Try Blacks", "https://teencoreclub.com/", "https://teencoreclub.com/video/")
-searchSites[961] = ("Spermatino", "Spermatino", "https://teencoreclub.com/", "https://teencoreclub.com/video/")
-searchSites[962] = ("Teach My Ass", "Teach My Ass", "https://teencoreclub.com/", "https://teencoreclub.com/video/")
-searchSites[963] = ("Drilled Chicks", "Drilled Chicks", "https://teencoreclub.com/", "https://teencoreclub.com/video/")
-searchSites[964] = ("Anal Checkups", "Anal Checkups", "https://teencoreclub.com/", "https://teencoreclub.com/video/")
-searchSites[965] = ("Fab Sluts", "Fab Sluts", "https://teencoreclub.com/", "https://teencoreclub.com/video/")
-searchSites[966] = ("Jerk-Off Pass", "Jerk-Off Pass", "https://teencoreclub.com/", "https://teencoreclub.com/video/")
-searchSites[967] = ("Nylon Spunk Junkies", "Nylon Spunk Junkies", "https://teencoreclub.com/", "https://teencoreclub.com/video/")
-searchSites[968] = ("She Got Six", "She Got Six", "https://teencoreclub.com/", "https://teencoreclub.com/video/")
-searchSites[969] = ("Spear Teen Pussy", "Spear Teen Pussy", "https://teencoreclub.com/", "https://teencoreclub.com/video/")
-searchSites[970] = ("Teen Core Club", "Teen Core Club", "https://teencoreclub.com/", "https://teencoreclub.com/video/")
-searchSites[971] = ("Teen Core Zine", "Teen Core Zine", "https://teencoreclub.com/", "https://teencoreclub.com/video/")
-searchSites[972] = ("Teens Go Porn", "Teens Go Porn", "https://teencoreclub.com/", "https://teencoreclub.com/video/")
-searchSites[973] = ("We Need New Talents", "We Need New Talents", "https://teencoreclub.com/", "https://teencoreclub.com/video/")
-searchSites[974] = ("X Core Club", "X Core Club", "https://teencoreclub.com/", "https://teencoreclub.com/video/")
 
 
 def getSearchBaseURL(siteID):
@@ -1131,7 +951,7 @@ def getSearchSiteIDByFilter(searchFilter):
     if searchResults:
         from operator import itemgetter
 
-        Log('Site found with method #3')
+        ##print('Site found with method #3')
         return max(searchResults, key=itemgetter(1))[0]
 
     # Method #2
@@ -1142,7 +962,7 @@ def getSearchSiteIDByFilter(searchFilter):
             siteNameF = sites[0].lower().replace(" ", "").replace("'", "")
 
             if searchFilterF == siteNameF:
-                Log('Site found with method #2')
+                ##print('Site found with method #2')
                 return searchID
         except:
             pass
@@ -1163,7 +983,7 @@ def getSearchSiteIDByFilter(searchFilter):
             siteNameF = sites[0].lower().replace(" ", "").replace("'", "")
 
             if siteNameF in searchFilterF[0] or siteNameF in searchFilterF[1]:
-                Log('Site found with method #1')
+                ##print('Site found with method #1')
                 return searchID
         except:
             pass
@@ -1171,15 +991,15 @@ def getSearchSiteIDByFilter(searchFilter):
     return None
 
 
-def getSearchSettings(mediaTitle):
-    mediaTitle = mediaTitle.replace(".", " ")
-    mediaTitle = mediaTitle.replace(" - ", " ")
-    mediaTitle = mediaTitle.replace("-", " ")
-    mediaTitle = mediaTitle.strip()
+def getSearchSettings(filename_title):
+    filename_title = filename_title.replace(".", " ")
+    filename_title = filename_title.replace(" - ", " ")
+    filename_title = filename_title.replace("-", " ")
+    filename_title = filename_title.strip()
 
     # Search Site abbreviations
     # Using Regex instead of .replace or .startswith so it can be case insensitive
-    Log("mediaTitle w/ possible abbreviation: " + mediaTitle)
+    logger.info("Filename with possible abbreviation: " + filename_title)
     abbreviations = (
         ('^18og ', '18OnlyGirls '),
         ('^18yo ', '18YearsOld '),
@@ -1219,7 +1039,6 @@ def getSearchSettings(mediaTitle):
         ('^btiu ', 'BigTitsinUniform '),
         ('^btlbd ', 'BigTitsLikeBigDicks '),
         ('^btra ', 'BigTitsRoundAsses '),
-        ('^bts ', 'BoxTruckSex '),
         ('^burna ', 'BurningAngel '),
         ('^bwb ', 'BigWetButts '),
         ('^cfnm ', 'ClothedFemaleNudeMale '),
@@ -1229,7 +1048,6 @@ def getSearchSettings(mediaTitle):
         ('^cuf ', 'CumFiesta '),
         ('^cws ', 'CzechWifeSwap '),
         ('^da ', 'DoctorAdventures '),
-        ('^DateSlam ', 'ScrewMeToo '),
         ('^Daughter ', 'DaughterSwap '),
         ('^Daughters ', 'DaughterSwap '),
         ('^dbm ', 'DontBreakMe '),
@@ -1274,7 +1092,6 @@ def getSearchSettings(mediaTitle):
         ('^ihaw ', 'IHaveAWife '),
         ('^iktg ', 'IKnowThatGirl '),
         ('^il ', 'ImmoralLive '),
-        ('^jb ', 'JavBus '),
         ('^kha ', 'KarupsHA '),
         ('^kow ', 'KarupsOW '),
         ('^kpc ', 'KarupsPC '),
@@ -1390,11 +1207,11 @@ def getSearchSettings(mediaTitle):
     )
     for abbreviation, full in abbreviations:
         r = re.compile(abbreviation, flags=re.IGNORECASE)
-        if r.match(mediaTitle):
-            mediaTitle = r.sub(full, mediaTitle, 1)
+        if r.match(filename_title):
+            filename_title = r.sub(full, filename_title, 1)
             break
 
-    Log("mediaTitle w/ possible abbrieviation fixed: " + mediaTitle)
+    logger.info("Filename with possible abbrieviation fixed: " + filename_title)
 
     # Search Site ID
     searchSiteID = None
@@ -1404,29 +1221,29 @@ def getSearchSettings(mediaTitle):
     searchDate = None
 
     # Remove Site from Title
-    searchSiteID = getSearchSiteIDByFilter(mediaTitle)
+    searchSiteID = getSearchSiteIDByFilter(filename_title)
     if searchSiteID is not None:
-        Log("^^^^^^^ siteID: %d" % searchSiteID)
-        Log("^^^^^^^ Shortening Title")
-        Log(mediaTitle[:len(searchSites[searchSiteID][0])].lower() + " vs " + searchSites[searchSiteID][0].lower())
+        logger.info("siteID Found: %d" % searchSiteID)
+        logger.info("Try shortening the Filename title")
+        logger.info(filename_title[:len(searchSites[searchSiteID][0])].lower() + " vs " + searchSites[searchSiteID][0].lower())
         # searchSites [0] matches madiaTitle
-        if mediaTitle[:len(searchSites[searchSiteID][0])].lower() == searchSites[searchSiteID][0].lower():
-            searchTitle = mediaTitle[len(searchSites[searchSiteID][0]) + 1:]
-            Log("1")
-        # searchSites [0] contains an ' but mediaTitle does not
-        elif mediaTitle[:len(searchSites[searchSiteID][0].replace("'", ""))].lower() == searchSites[searchSiteID][0].lower().replace("'", ""):
-            searchTitle = mediaTitle[len(searchSites[searchSiteID][0]):]
-            Log("2")
-        # searchSites [0] contains an ' and spaces but mediaTitle does not
-        elif mediaTitle[:len(searchSites[searchSiteID][0].replace(" ", "").replace("'", ""))].lower() == searchSites[searchSiteID][0].lower().replace(" ", "").replace("'", ""):
-            searchTitle = mediaTitle[len(searchSites[searchSiteID][0].replace(" ", "").replace("'", "")) + 1:]
-            Log("3")
-        # searchSites [0] and mediaTitle have the same punctuation but differnt spaces
-        elif mediaTitle[:len(searchSites[searchSiteID][0].replace(" ", ""))].lower() == searchSites[searchSiteID][0].lower().replace(" ", ""):
-            searchTitle = mediaTitle[len(searchSites[searchSiteID][0].replace(" ", "")) + 1:]
-            Log("4")
+        if filename_title[:len(searchSites[searchSiteID][0])].lower() == searchSites[searchSiteID][0].lower():
+            searchTitle = filename_title[len(searchSites[searchSiteID][0]) + 1:]
+            logger.info("1")
+        # searchSites [0] contains an ' but filename_title does not
+        elif filename_title[:len(searchSites[searchSiteID][0].replace("'", ""))].lower() == searchSites[searchSiteID][0].lower().replace("'", ""):
+            searchTitle = filename_title[len(searchSites[searchSiteID][0]):]
+            logger.info("2")
+        # searchSites [0] contains an ' and spaces but filename_title does not
+        elif filename_title[:len(searchSites[searchSiteID][0].replace(" ", "").replace("'", ""))].lower() == searchSites[searchSiteID][0].lower().replace(" ", "").replace("'", ""):
+            searchTitle = filename_title[len(searchSites[searchSiteID][0].replace(" ", "").replace("'", "")) + 1:]
+            logger.info("3")
+        # searchSites [0] and filename_title have the same punctuation but differnt spaces
+        elif filename_title[:len(searchSites[searchSiteID][0].replace(" ", ""))].lower() == searchSites[searchSiteID][0].lower().replace(" ", ""):
+            searchTitle = filename_title[len(searchSites[searchSiteID][0].replace(" ", "")) + 1:]
+            logger.info("4")
         else:
-            title = mediaTitle.replace('.com', '').title()
+            title = filename_title.replace('.com', '').title()
             site = searchSites[searchSiteID][0].lower()
 
             title = re.sub(r'[^a-zA-Z0-9 ]', '', title)
@@ -1442,33 +1259,26 @@ def getSearchSettings(mediaTitle):
             if matched:
                 searchTitle = re.sub(site, '', title, 1, flags=re.IGNORECASE)
                 searchTitle = ' '.join(searchTitle.split())
-                Log("5")
+                logger.info("5")
             else:
-                searchTitle = mediaTitle
-                Log("6")
+                searchTitle = filename_title
+                logger.info("6")
         if searchTitle[:4].lower() == "com ":
             searchTitle = searchTitle[4:]
-            Log("7")
-        Log("8")
+            logger.info("7")
+        logger.info("8")
     else:
-        searchTitle = mediaTitle
+        searchTitle = filename_title
 
-    # Gamma Ent remove Scene number from BONUS and BTS
-    if searchSiteID == 53 or searchSiteID == 183 or (searchSiteID >= 277 and searchSiteID <= 278) or searchSiteID == 281 or (searchSiteID >= 285 and searchSiteID <= 287) or (searchSiteID >= 329 and searchSiteID <= 332) or (searchSiteID >= 351 and searchSiteID <= 392) or (searchSiteID >= 460 and searchSiteID <= 466) or searchSiteID == 692:
-        if "Bonus" in searchTitle or "Bts" in searchTitle:
-            alpha = searchTitle.find('Scene ', 0)
-            omega = searchTitle.find('Scene ', 0) + 9
-            sceneNumber = searchTitle[alpha:omega]
-            searchTitle = searchTitle.replace(sceneNumber, "")
-
-    Log("searchTitle (before date processing): " + searchTitle)
+    logger.info("searchTitle (before date processing): " + searchTitle)
 
     # Search Type
     searchTitle = searchTitle.replace('#', '')
     searchDate = None
     regex = [
         (r'\b\d{4} \d{2} \d{2}\b', '%Y %m %d'),
-        (r'\b\d{2} \d{2} \d{2}\b', '%y %m %d')
+        (r'\b\d{2} \d{2} \d{2}\b', '%y %m %d'),
+        (r'\b\d{2} \d{2} \d{4}\b', '%d %m %Y')
     ]
     date_obj = None
     for r, dateFormat in regex:
@@ -1483,21 +1293,4 @@ def getSearchSettings(mediaTitle):
                 searchDate = date_obj.strftime('%Y-%m-%d')
                 searchTitle = ' '.join(re.sub(r, '', searchTitle, 1).split())
                 break
-
     return (searchSiteID, searchTitle, searchDate)
-
-
-def posterAlreadyExists(posterUrl, metadata):
-    posterUrl = PAutils.getClearURL(posterUrl)
-    for p in metadata.posters.keys():
-        # Log(p.lower())
-        if p.lower() == posterUrl.lower():
-            Log("Found %s in posters collection" % posterUrl)
-            return True
-        else:
-            pass
-
-    for p in metadata.art.keys():
-        if p.lower() == posterUrl.lower():
-            return True
-    return False

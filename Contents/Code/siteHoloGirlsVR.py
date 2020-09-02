@@ -5,10 +5,11 @@ import PAutils
 
 
 def search(results, encodedTitle, searchTitle, siteNum, lang, searchDate):
-
-    sceneID = searchTitle.split(' ')[0]
-    if unicode(sceneID, 'utf8').isdigit():
+    sceneID = searchTitle.split(' ', 1)[0]
+    if unicode(sceneID, 'UTF-8').isdigit():
         searchTitle = searchTitle.replace(sceneID, '', 1).strip()
+    else:
+        sceneID = None
 
     if sceneID and not searchTitle:
         sceneURL = '%s/Scenes/Videos/%s' % (PAsearchSites.getSearchBaseURL(siteNum), sceneID)
@@ -96,7 +97,7 @@ def update(metadata, siteID, movieGenres, movieActors):
         pass
 
     for photo in detailsPageElements.xpath('//div[@class="vid-flex-container"]//span'):
-        photoLink = photo.xpath('.//img/@rsc')[0].replace('_thumb', '')
+        photoLink = photo.xpath('.//img/@src')[0].replace('_thumb', '')
         art.append(photoLink)
 
     Log('Artwork found: %d' % len(art))

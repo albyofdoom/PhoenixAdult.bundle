@@ -11,7 +11,7 @@ def search(results, encodedTitle, searchTitle, siteNum, lang, searchDate):
         searchResults = HTML.ElementFromString(req.text)
         for searchResult in searchResults.xpath('//div[contains(@class, "content-grid-item")]'):
             titleNoFormatting = searchResult.xpath('//span[@class= "title"]/a')[0].text_content().strip()
-            curID = PAutils.Encode(searchResult.xpath('//span[@class="title"]/a/@href')[0].split('/')[3])
+            curID = searchResult.xpath('//span[@class="title"]/a/@href')[0].split('/')[3]
             releaseDate = parse(searchResult.xpath('.//span[@class="date"]')[0].text_content().strip()).strftime('%Y-%m-%d')
 
             if searchDate:
@@ -46,7 +46,7 @@ def update(metadata, siteID, movieGenres, movieActors):
     detailsPageElements = HTML.ElementFromString(req.text)
 
     # Title
-    metadata.title = detailsPageElements.xpath('//div[contains(@class, "content-pane-title")]/h2')[0].text_content().strip()
+    metadata.title = detailsPageElements.xpath('//div[contains(@class, "content-pane-title")]//h2')[0].text_content().strip()
 
     # Summary
     description = detailsPageElements.xpath('//div[@class="col-12 content-pane-column"]/div')
@@ -69,7 +69,7 @@ def update(metadata, siteID, movieGenres, movieActors):
     metadata.collections.add(tagline)
 
     # Release Date
-    date = detailsPageElements.xpath('//div[contains(@class, "content-pane")]//span[@class= "date"]')[0].text_content().strip()
+    date = detailsPageElements.xpath('//div[contains(@class, "content-pane")]//span[@class="date"]')[0].text_content().strip()
     if date:
         date_object = parse(date)
         metadata.originally_available_at = date_object
