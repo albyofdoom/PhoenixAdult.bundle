@@ -70,6 +70,7 @@ def update(metadata, siteID, movieGenres, movieActors):
         metadata.summary = description.strip()
     except:
         pass
+
     # Genres
     movieGenres.clearGenres()
 
