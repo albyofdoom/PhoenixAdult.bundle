@@ -80,6 +80,8 @@ class PhoenixActors:
                 newActor = 'Bridgette B'
             elif newActor == 'Capri Cavalli':
                 newActor = 'Capri Cavanni'
+            elif newActor == 'Carrie Cherry' or newActor == 'Carry Cherri' or newActor == 'Corry Cherry' or newActor == 'Kerry Cherry' or newActor == 'Dormiona':
+                newActor = 'Carry Cherry'
             elif newActor == 'Ce Ce Capella':
                 newActor = 'CeCe Capella'
             elif newActor == 'Charli Red':
@@ -172,6 +174,8 @@ class PhoenixActors:
                 newActor = 'Riley Jensen'
             elif newActor == 'Sara Luv':
                 newActor = 'Sara Luvv'
+            elif newActor == 'Scarlet Rebel' or newActor == 'Scarlett Rebel' or newActor == 'Scarlett Domingo':
+                newActor = 'Scarlet Domingo'
             elif newActor == 'Shalina Devine':
                 newActor = 'Shalina Divine'
             elif newActor == 'Dylann Vox' or newActor == 'Dylan Vox':
@@ -217,11 +221,20 @@ class PhoenixActors:
                     newActor = 'Abella Anderson'
                 elif newActor == 'Noemi Bilas':
                     newActor = 'Noemie Bilas'
+            elif metadata.studio == 'ClubSeventeen':
+                if newActor == 'Scarlet':
+                    newActor = 'Scarlet Domingo'
+            elif metadata.studio == 'CumLouder':
+                if newActor == 'Scarlett':                    
+                    newActor = 'Scarlet Domingo'
             elif metadata.studio == 'Deeper' or metadata.studio == 'Tushyraw' or metadata.studio == 'Tushy' or metadata.studio == 'Blacked' or metadata.studio == 'Blackedraw' or metadata.studio == 'Vixen':
                 if newActor == 'Vikalita':
                     newActor = 'Vika Lita'
                 elif newActor == 'Vina Skyy':
                     newActor = 'Vina Sky'
+            elif metadata.studio == 'Evilangel':
+                if newActor == 'Scarlet':
+                    newActor = 'Scarlet Domingo'
             elif metadata.studio == 'FuelVirtual':
                 if newActor == 'Nicole':
                     newActor = 'Nicole Ray'
@@ -359,6 +372,9 @@ class PhoenixActors:
                     newActor = 'Aletta Ocean'
                 elif newActor == 'Remy':
                     newActor = 'Remy LaCroix'
+            elif metadata.studio == 'Holed':
+                if newActor == 'Scarlet':                    
+                    newActor = 'Scarlet Domingo'
             elif metadata.studio == 'LegalPorno':
                 if newActor == 'Abby':
                     newActor = 'Krystal Boyd'
@@ -766,6 +782,9 @@ class PhoenixActors:
                     newActor = 'Teagan Summers'
                 elif newActor == 'Wanda':
                     newActor = 'Wanda Curtis'
+            elif metadata.studio == 'Mylf':
+                if newActor == 'Scarlett':
+                    newActor = 'Scarlet Domingo'
             elif metadata.studio == 'Nubiles':
                 if newActor == 'Abbey':
                     newActor = 'Amia Miley'
@@ -1534,6 +1553,9 @@ class PhoenixActors:
             elif metadata.studio == 'Porn Pros':
                 if newActor == 'Bailey Brookes':
                     newActor = 'Bailey Brooke'
+            elif metadata.studio == 'Porndoe Premium':
+                if newActor == 'Scarlett D':
+                    newActor = 'Scarlet Domingo'
             elif metadata.studio == 'TeamSkeet':
                 if newActor == 'Ada S':
                     newActor = 'Ada Sanchez'
@@ -2331,6 +2353,8 @@ class PhoenixActors:
             elif metadata.studio == 'Private':
                 if newActor == 'Lolita Taylor':
                     newActor = 'Lola Taylor'
+                elif newActor == 'Scarlet':
+                    newActor = 'Scarlet Domingo'
             elif metadata.studio == 'VIPissy':
                 if newActor == 'Susan Ayne':
                     newActor = 'Susan Ayn'
@@ -2384,7 +2408,7 @@ class PhoenixActors:
                     newActor = 'Samantha Bentley'
                 elif newActor == 'Fayth':
                     newActor = 'Fayth On Fire'
-            elif metadata.studio == 'QueenSnake' or metadata.studio == 'QueenSect' :
+            elif metadata.studio == 'QueenSnake' or metadata.studio == 'QueenSect':
                 if newActor == 'Qs':
                     newActor = 'Queensnake'
                 elif newActor != 'Queensnake':

@@ -27,7 +27,7 @@ def search(results, encodedTitle, searchTitle, siteNum, lang, searchDate):
             titleNoFormatting = searchResult.xpath('.//img/@alt')[0].strip()
             curID = PAutils.Encode(searchResult.xpath('.//a[@class="shoot-link"]/@href')[0])
             releaseDate = parse(searchResult.xpath('.//div[@class="date"]')[0].text_content().strip()).strftime('%Y-%m-%d')
-            shootID = searchResult.xpath('.//span[@class="favorite-button"]/@data-id')[0]
+            shootID = searchResult.xpath('.//span[contains(@class, "favorite-button")]/@data-id')[0]
 
             if searchDate:
                 score = 100 - Util.LevenshteinDistance(searchDate, releaseDate)
@@ -163,7 +163,7 @@ def update(metadata, siteID, movieGenres, movieActors):
     movieGenres.clearGenres()
     genres = detailsPageElements.xpath('//p[@class="tag-list category-tag-list"]//a')
     for genreLink in genres:
-        genreName = genreLink.text_content().replace(',','').strip().title()
+        genreName = genreLink.text_content().replace(',', '').strip().title()
 
         movieGenres.addGenre(genreName)
 
