@@ -239,6 +239,16 @@ The above is a reference list. Please see [the manualsearch doc](./manualsearch.
 + #### DefeatedXXX | Matching type: *[Enhanced](./manualsearch.md#enhanced-search)*
 + #### DefeatedSexFight | Matching type: *[Enhanced](./manualsearch.md#enhanced-search)*
 + #### Deviant Hardcore | Matching type: *[Limited](./manualsearch.md#limited-search)*
++ #### Desperate Amateurs | Matching type: *[Enhanced](./manualsearch.md#enhanced-search)*
++ #### Dirty Hard Drive Network | Matching type: *[Enhanced](./manualsearch.md#enhanced-search)*
+  - Bang My Hand
+  - Dirty Sluts and Studs
+  - Girls In Nylon
+  - Katie Kox
+  - Kiera King
+  - Lee Bang XXX
+  - Sophie Dee and Friends
+  - The Squirt Instructor
 + #### DigitalPlayground | Matching type: *[Enhanced](./manualsearch.md#enhanced-search)*
 + #### Dogfart | Matching type: *[Limited](./manualsearch.md#limited-search)* - **Date Add**
   - BarbCummings
@@ -272,6 +282,10 @@ The above is a reference list. Please see [the manualsearch doc](./manualsearch.
 + #### Evolved Fights Network | Matching type: *[Enhanced](./manualsearch.md#enhanced-search)*
   - Evolved Fights
   - Evolved Fights Lesbian Edition
++ #### ExploitedX | Matching type: *[Enhanced](./manualsearch.md#enhanced-search)*
+  - Backroom Casting Couch
+  - Black Ambush
+  - Exploited College Girls
 + #### FakeHub | Matching type: *[Enhanced](./manualsearch.md#enhanced-search)*
   - Fake Agent
   - Fake Agent UK
@@ -418,6 +432,7 @@ The above is a reference list. Please see [the manualsearch doc](./manualsearch.
 + #### LustReality | Matching type: *[Enhanced](./manualsearch.md#enhanced-search)*
 + #### ManyVids | Matching type: *[Exact](./manualsearch.md#exact-match)* - **SceneID, Date Add**
 + #### Meana Wolf | Matching type: *[Limited](./manualsearch.md#limited-search)*
++ #### Melone Challenge | Matching type: *[Enhanced](./manualsearch.md#enhanced-search)*
 + #### MetArt Network | Matching type: *[Enhanced](./manualsearch.md#enhanced-search)*
   - ALS Scan
   - Errotica Archives
@@ -653,7 +668,7 @@ The above is a reference list. Please see [the manualsearch doc](./manualsearch.
   - Stepfamily Channel PornPortal
   - Teen Channel PornPortal
   - VR Channel PornPortal
-+ #### PornPros Network | Matching type: *[Exact](./manualsearch.md#exact-match)* - **Direct URL, Date Add**
++ #### PornPros Network | Matching type: *[Enhanced](./manualsearch.md#enhanced-search)*
   - 18YearsOld
   - 40ozBounce
   - CockCompetition
@@ -675,7 +690,7 @@ The above is a reference list. Please see [the manualsearch doc](./manualsearch.
   - ShadyPi
   - SquirtDisgrace
   - TeenBFF
-+ #### Other PornPros Sites | Matching type: *[Exact](./manualsearch.md#exact-match)* - **Direct URL, Date Add**
++ #### Other PornPros Sites | Matching type: *[Enhanced](./manualsearch.md#enhanced-search)*
   - Baeb
   - CastingCouch-X
   - Cum4K
