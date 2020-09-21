@@ -13,8 +13,6 @@ def search(results, encodedTitle, searchTitle, siteNum, lang, searchDate):
 
     if searchJAVID:
         encodedTitle = searchJAVID
-    # else:
-    #     encodedTitle = searchTitle
 
     searchTypes = [
         'Censored',

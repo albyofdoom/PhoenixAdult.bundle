@@ -44,6 +44,7 @@ def update(metadata, siteID, movieGenres, movieActors):
     Log('metadata_id')
     Log(metadata_id)
     sceneURL = PAutils.Decode(metadata_id[0])
+    Log(sceneURL)
     if not sceneURL.startswith('http'):
         sceneURL = PAsearchSites.getSearchBaseURL(siteID) + sceneURL
     req = PAutils.HTTPRequest(sceneURL)
@@ -58,7 +59,8 @@ def update(metadata, siteID, movieGenres, movieActors):
 
     # Tagline and Collection(s)
     metadata.collections.clear()
-    channel = detailsPageElements.xpath('//div[contains(@class, "shoot-logo")]')[0].text_content().strip()
+    channel = detailsPageElements.xpath('substring-after(//div[contains(@class, "shoot-logo")]/a/@href, "/channel/")')
+    Log(channel)
     if 'boundgangbangs' in channel:
         tagline = 'Bound Gangbangs'
     elif 'brutalsessions' in channel:
@@ -143,7 +145,7 @@ def update(metadata, siteID, movieGenres, movieActors):
         tagline = PAsearchSites.getSearchSiteName(siteID)
     metadata.tagline = tagline
     metadata.collections.add(tagline)
-    metadata.collections.add('Studio - Kink')
+    Log(tagline)
 
     # Studio
     if tagline == 'Chantas Bitches' or tagline == 'Fucked and Bound' or tagline == 'Captive Male':

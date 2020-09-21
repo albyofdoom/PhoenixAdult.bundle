@@ -1540,6 +1540,8 @@ class PhoenixAdultAgent(Agent.Movies):
             metadata = PAsearchSites.networkTeenCoreClub.update(metadata, siteID, movieGenres, movieActors)
 
         # Exploited X
+        elif (976 <= siteID <= 978):
+            results = PAsearchSites.networkExploitedX.update(metadata, siteID, movieGenres, movieActors)
 
         # Desperate Amateurs
         elif (siteID == 979):
@@ -1555,6 +1557,7 @@ class PhoenixAdultAgent(Agent.Movies):
 
         # Cleanup Genres and Add
         Log("Genres")
+        movieGenres.processGenres(metadata)
         metadata.genres = sorted(metadata.genres)
         metadata.collections.add('Studio - ' + metadata.studio)
 

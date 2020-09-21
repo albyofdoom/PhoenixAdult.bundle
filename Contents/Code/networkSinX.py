@@ -40,7 +40,6 @@ def update(metadata, siteID, movieGenres, movieActors):
     tagline = PAsearchSites.getSearchSiteName(siteID).strip()
     metadata.tagline = tagline
     metadata.collections.add(tagline)
-    metadata.collections.add('Studio - SinX')
 
     # Release Date
     date = detailsPageElements.xpath('//div[2]/div[1]/div[3]/div[1]/ul/li[1]')[0].text_content().strip()

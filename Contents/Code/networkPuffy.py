@@ -59,7 +59,6 @@ def update(metadata, siteID, movieGenres, movieActors):
     tagline = PAsearchSites.getSearchSiteName(siteID)
     metadata.tagline = tagline
     metadata.collections.add(tagline)
-    metadata.collections.add('Studio - Puffy Network')
 
     # Release Date
     date = detailsPageElements.xpath('//div/section[2]/dl/dt[2]')[0].text_content().replace('Released on:', '')

@@ -311,7 +311,6 @@ def update(metadata, siteID, movieGenres, movieActors):
         tagline = PAsearchSites.getSearchSiteName(siteID)
     metadata.tagline = tagline
     metadata.collections.add(tagline)
-    metadata.collections.add('Studio - ' + metadata.studio)
 
     # Title DVD
     try:
