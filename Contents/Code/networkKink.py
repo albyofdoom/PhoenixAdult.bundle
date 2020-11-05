@@ -41,6 +41,8 @@ def search(results, encodedTitle, searchTitle, siteNum, lang, searchDate):
 
 def update(metadata, siteID, movieGenres, movieActors):
     metadata_id = str(metadata.id).split('|')
+    Log('metadata_id')
+    Log(metadata_id)
     sceneURL = PAutils.Decode(metadata_id[0])
     if not sceneURL.startswith('http'):
         sceneURL = PAsearchSites.getSearchBaseURL(siteID) + sceneURL
@@ -48,7 +50,8 @@ def update(metadata, siteID, movieGenres, movieActors):
     detailsPageElements = HTML.ElementFromString(req.text)
 
     # Title
-    metadata.title = detailsPageElements.xpath('//h1[@class="shoot-title"]')[0].text_content().strip()[:-1]
+    shootID = detailsPageElements.xpath('//div/@data-shootid')[0]
+    metadata.title = detailsPageElements.xpath('//h1[@class="shoot-title"]')[0].text_content().strip()[:-1] + '(%s)' % (shootID)
 
     # Summary
     metadata.summary = detailsPageElements.xpath('//div[@class="description"]')[1].text_content().strip().replace('\n', ' ').replace('Description:', '')
@@ -140,6 +143,7 @@ def update(metadata, siteID, movieGenres, movieActors):
         tagline = PAsearchSites.getSearchSiteName(siteID)
     metadata.tagline = tagline
     metadata.collections.add(tagline)
+    metadata.collections.add('Studio - Kink')
 
     # Studio
     if tagline == 'Chantas Bitches' or tagline == 'Fucked and Bound' or tagline == 'Captive Male':

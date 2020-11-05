@@ -311,11 +311,12 @@ def update(metadata, siteID, movieGenres, movieActors):
         tagline = PAsearchSites.getSearchSiteName(siteID)
     metadata.tagline = tagline
     metadata.collections.add(tagline)
+    metadata.collections.add('Studio - ' + metadata.studio)
 
     # Title DVD
     try:
         dvdTitle = detailsPageElements.xpath('//a[contains(@class,"dvdLink")][1]')[0].get('title').strip()
-        metadata.collections.add(dvdTitle.replace('#0', '').replace('#', ''))
+        metadata.metadata.tagline = tagline + dvdTitle.replace('#0', '').replace('#', '')
     except:
         try:
             dvdTitleScript = detailsPageElements.xpath('//script[contains(text(),"dvdName")]')[0].text_content()
@@ -323,7 +324,7 @@ def update(metadata, siteID, movieGenres, movieActors):
             omega = dvdTitleScript.find('"', alpha)
             dvdTitle = dvdTitleScript[alpha:omega]
             if dvdTitle:
-                metadata.collections.add(dvdTitle.replace('#0', '').replace('#', ''))
+                metadata.metadata.tagline = tagline + dvdTitle.replace('#0', '').replace('#', '')
         except:
             try:
                 dvdTitle = detailsPageElements.xpath('//h1[@class="sceneTitle"]')[0].text_content().strip()
@@ -331,7 +332,7 @@ def update(metadata, siteID, movieGenres, movieActors):
                 dvdTitle = dvdTitle.replace("BONUS", "")
                 dvdTitle = dvdTitle.replace("BTS-", "").replace("BTS - ", "")
                 dvdTitle = dvdTitle.replace("BTS", "")
-                metadata.collections.add(dvdTitle.replace('#0', '').replace('#', ''))
+                metadata.metadata.tagline = tagline + dvdTitle.replace('#0', '').replace('#', '')
             except:
                 dvdTitle = "This is some damn nonsense that should never match the scene title"
 

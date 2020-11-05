@@ -52,6 +52,8 @@ def update(metadata, siteID, movieGenres, movieActors):
         tagline = 'PornFidelity'
     metadata.tagline = tagline
     metadata.collections.add(tagline)
+    metadata.collections.add('Studio - Pornfidelity')
+
 
     # Release Date
     for metadataPart in detailsPageElements.xpath('//div[contains(@class,"episode-summary")]//h4'):

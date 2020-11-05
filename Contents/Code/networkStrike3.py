@@ -56,6 +56,7 @@ def update(metadata, siteID, movieGenres, movieActors):
     # Tagline and Collection(s)
     metadata.collections.clear()
     metadata.collections.add(metadata.studio)
+    metadata.collections.add('Studio - Strike3')
 
     # Release Date
     date_object = parse(video['releaseDate'])
