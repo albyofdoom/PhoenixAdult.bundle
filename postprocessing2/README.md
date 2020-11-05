@@ -70,3 +70,4 @@ More to add as more sites will be added and also propably I will modify the curr
 ### Pull Requests, Recommendations or Questions
 If you want to support a specific site, you can re-factor the code or you have a question please don't hesitate to make a pull request or open an issue. 
 ##### I will monitor this as my personal time allows me to do so.
+
